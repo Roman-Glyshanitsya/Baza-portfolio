@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.space {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    position: relative;
+    perspective: 1000px;
+    /* Создаем перспективу для эффекта движения */
+}
+
+.stars {
+    width: 2px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    animation: moveStars 5s linear infinite;
+}
+
+/* Анимация движения звезд */
+@keyframes moveStars {
+    from {
+        transform: translateZ(-1000px);
+    }
+
+    to {
+        transform: translateZ(0);
+        /* Двигаем звезды по оси Z к пользователю */
+    }
+}
