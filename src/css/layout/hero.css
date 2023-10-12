@@ -1,12 +1,12 @@
-/* body {
+.hero {
     margin: 0;
     overflow: hidden;
-} */
+}
 
 .space {
     width: 100vw;
     height: 100vh;
-    background: black;
+    background-color: black;
     position: relative;
     perspective: 1000px;
     /* Создаем перспективу для эффекта движения */

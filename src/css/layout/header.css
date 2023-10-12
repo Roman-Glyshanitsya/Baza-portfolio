@@ -73,10 +73,12 @@
 
 .nav-menu {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 30px;
     overflow: auto;
     background-color: black;
 
@@ -99,29 +101,43 @@
     transition: opacity 300ms ease-in-out;
 }
 
-.nav-menu__close-btn {
-    color: #FFF;
-    font-size: 36px;
+.nav-menu__item:not(:last-child) {
+    margin-bottom: 30px;
 }
-
-.nav-menu__list {
-    padding-right: 100px;
-}
-
-/* .nav-menu__item {
-
-} */
 
 .nav-menu__link {
     color: #FFF;
     font-family: 'Play', sans-serif;
-    font-size: 8vw;
+    font-size: 10vw;
     font-weight: 400;
     height: 10vw;
     letter-spacing: 10px;
     cursor: pointer;
+
+    /* Начальные стили для анимации */
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .nav-menu__link:hover {
-    color: aqua;
+    background-color: #FFF;
+    color: black;
+}
+
+.nav-menu.is-open .nav-menu__link {
+    /* Задержка и анимация для каждого элемента */
+    transition-delay: 0.5s;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-menu__link {
+        font-size: 8vw;
+    }
+
+    .nav-menu {
+        padding-right: 250px;
+    }
 }
