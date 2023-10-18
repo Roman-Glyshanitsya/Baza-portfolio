@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     background-color: transparent;
-    z-index: 100;
+    z-index: 10;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -25,6 +25,8 @@
     font-weight: 700;
 }
 
+
+/* =========== Burger Button =================== */
 .burger-btn {
     background-color: transparent;
 }
@@ -71,6 +73,8 @@
     transform: rotate(315deg);
 }
 
+
+/* ============= Open Navigation Menu ==================== */
 .nav-menu {
     position: fixed;
     z-index: 10;
@@ -79,7 +83,7 @@
     width: 100%;
     height: 100%;
     padding: 30px;
-    overflow: auto;
+    overflow: hidden;
     background-color: black;
 
     opacity: 0;
@@ -91,56 +95,40 @@
     justify-content: flex-end;
 }
 
-.slide-text__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-
-
-}
-
-.slide-text__content,
+/* Slide Text */
+.slide-top-text__content,
 .slide-bottom-text__content {
+    position: absolute;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    transform: translateX(0%);
 }
 
-.slide-text__content {
-    animation: slide-text 20s linear infinite;
+.slide-top-text__content {
+    top: 0;
+    animation: slide-to-left-text 20s linear infinite;
 }
 
 .slide-bottom-text__content {
-    animation: slide__bottom-text 20s linear infinite;
+    bottom: 0;
+    animation: slide-to-right-text 20s linear infinite;
 }
 
 .slide-text__items {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
     margin-right: 15px;
 }
 
 .slide-text {
     display: flex;
-    flex-wrap: nowrap;
     gap: 15px;
     font-size: 30px;
     font-weight: 400;
     color: #FFF;
-    overflow: hidden;
 }
 
-@keyframes slide-text {
+@keyframes slide-to-left-text {
     0% {
         transform: translateX(0%);
     }
@@ -150,7 +138,7 @@
     }
 }
 
-@keyframes slide__bottom-text {
+@keyframes slide-to-right-text {
     0% {
         transform: translateX(0%);
     }
@@ -160,6 +148,7 @@
     }
 }
 
+/* Navigation Menu */
 .nav-menu.is-open {
     opacity: 1;
     visibility: visible;
@@ -194,7 +183,6 @@
 }
 
 .nav-menu.is-open .nav-menu__link {
-    /* Задержка и анимация для каждого элемента */
     transition-delay: 0.5s;
     transform: translateY(0);
     opacity: 1;

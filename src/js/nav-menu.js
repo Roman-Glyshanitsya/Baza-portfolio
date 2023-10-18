@@ -28,8 +28,8 @@ function cloneAndAppend(source, target) {
 }
 
 const slideItems = document.querySelector('.slide-text__items');
-const content = document.querySelector('.slide-text__content');
-cloneAndAppend(slideItems, content);
+const topContent = document.querySelector('.slide-top-text__content');
+cloneAndAppend(slideItems, topContent);
 
 const slideBottomItems = document.querySelector('.slide-text__items');
 const bottomContent = document.querySelector('.slide-bottom-text__content');
