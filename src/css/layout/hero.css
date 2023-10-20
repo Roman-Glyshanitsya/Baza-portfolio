@@ -23,11 +23,48 @@
 /* Анимация движения звезд */
 @keyframes moveStars {
     from {
-        transform: translateZ(-1000px);
+        transform: translateZ(-5000px);
     }
 
     to {
-        transform: translateZ(0);
+        transform: translateZ(100px);
         /* Двигаем звезды по оси Z к пользователю */
     }
+}
+
+/* Gig Animation */
+.hero__gifs-container {
+    height: 800px;
+    perspective: 400px;
+}
+
+.crawl {
+    position: relative;
+    top: 0;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+}
+
+@keyframes crawl {
+    0% {
+        top: 120%;
+        transform: rotateX(20deg) translateZ(0);
+    }
+
+    100% {
+        top: -6000px;
+        transform: rotateX(25deg) translateZ(-2500px);
+    }
+}
+
+.hero__gifs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero__gifs-item {}
+
+.hero__gifs-item-link {
+    cursor: pointer;
 }
