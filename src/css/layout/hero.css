@@ -47,7 +47,7 @@
 
 @keyframes crawl {
     0% {
-        top: 120%;
+        top: 150%;
         transform: rotateX(20deg) translateZ(0);
     }
 
