@@ -11,14 +11,14 @@
 function createAndAppendText(container, count) {
   for (let i = 0; i < count; i++) {
     const span = document.createElement('span');
-    span.textContent = 'Lorem';
+    span.textContent = 'ХУЙ';
     container.appendChild(span);
   }
 }
 
 const slideText = document.querySelectorAll('.slide-text');
 slideText.forEach(element => {
-  createAndAppendText(element, 20);
+  createAndAppendText(element, 40);
 });
 
 // Infinite animation
