@@ -61,10 +61,22 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+
 }
 
-.hero__gifs-item {}
+.hero__gifs-item {
+    padding: 20px;
+    border-radius: 30px;
+    transition: transform 500ms ease-in-out;
+}
 
-.hero__gifs-item-link {
-    cursor: pointer;
+.hero__gifs-item:hover,
+.hero__gifs-item:focus {
+    border: 2px solid #fff;
+    transform: scale(1.5);
+
+}
+
+.hero__gifs-img {
+    border-radius: 30px;
 }
