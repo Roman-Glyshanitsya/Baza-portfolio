@@ -1,5 +1,4 @@
 .hero {
-    margin: 0;
     overflow: hidden;
 }
 
@@ -35,37 +34,41 @@
 /* Gig Animation */
 .hero__gifs-container {
     height: 800px;
-    perspective: 400px;
+    perspective: 1500px;
 }
 
 .crawl {
     position: relative;
+    z-index: 100;
     top: 0;
     transform-origin: 50% 100%;
     animation: crawl 60s linear;
+
+    display: flex;
 }
 
 @keyframes crawl {
     0% {
-        top: 150%;
-        transform: rotateX(20deg) translateZ(0);
+        top: 100%;
+        transform: rotateX(40deg) translateZ(0);
     }
 
     100% {
-        top: -6000px;
-        transform: rotateX(25deg) translateZ(-2500px);
+        top: -4000px;
+        transform: rotateX(60deg) translateZ(-1500px);
     }
 }
 
+.first-column {}
+
 .hero__gifs-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-
+    flex-direction: column;
+    /* align-content: stretch; */
 }
 
 .hero__gifs-item {
-    padding: 20px;
+    padding: 10px;
     border-radius: 30px;
     transition: transform 500ms ease-in-out;
 }
@@ -73,7 +76,7 @@
 .hero__gifs-item:hover,
 .hero__gifs-item:focus {
     border: 2px solid #fff;
-    transform: scale(1.5);
+    transform: scale(1.2);
 
 }
 
