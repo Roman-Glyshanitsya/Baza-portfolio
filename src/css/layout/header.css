@@ -22,7 +22,7 @@
     z-index: 100;
 
     color: #FFF;
-    /* font-family: 'Play', sans-serif; */
+
     font-size: 36px;
     font-weight: 700;
 }
@@ -166,7 +166,6 @@
 
 .nav-menu__link {
     color: #FFF;
-    /* font-family: 'Play', sans-serif; */
     font-size: 10vw;
     font-weight: 400;
     height: 10vw;
