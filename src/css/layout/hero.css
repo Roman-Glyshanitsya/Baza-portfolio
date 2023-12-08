@@ -1,5 +1,6 @@
 .hero {
     overflow: hidden;
+    position: relative;
 }
 
 .space {
@@ -31,16 +32,17 @@
     }
 }
 
-/* Gig Animation */
+/* Gifs Animation */
 .hero__gifs-container {
-    height: 800px;
-    perspective: 1500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    perspective: 600px;
 }
 
 .crawl {
     position: relative;
-    z-index: 100;
-    top: 0;
     transform-origin: 50% 100%;
     animation: crawl 60s linear;
 
@@ -49,13 +51,13 @@
 
 @keyframes crawl {
     0% {
-        top: 100%;
-        transform: rotateX(40deg) translateZ(0);
+        top: 0;
+        transform: rotateX(20deg) translateZ(0);
     }
 
     100% {
-        top: -4000px;
-        transform: rotateX(60deg) translateZ(-1500px);
+        top: -6000px;
+        transform: rotateX(25deg) translateZ(-2500px);
     }
 }
 
